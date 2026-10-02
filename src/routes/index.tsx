@@ -88,7 +88,7 @@ function Brand() {
   return (
     <a href="#accueil" className="flex items-center gap-3" aria-label="Kamel AI, accueil">
       <span className="brand-mark" aria-hidden="true"><span /></span>
-      <span className="text-[1.08rem] font-extrabold uppercase tracking-[0.16em]">Kamel <b className="text-primary">AI</b></span>
+      <span className="text-[1.08rem] font-extrabold uppercase tracking-[0.16em]">PRESENCE&nbsp;<b className="text-primary">AI</b></span>
     </a>
   );
 }
