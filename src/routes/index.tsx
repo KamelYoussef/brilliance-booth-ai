@@ -30,14 +30,14 @@ import {
 } from "@/components/ui/sheet";
 
 const description =
-  "Kamel AI transforme vos opérations grâce à des solutions d'intelligence artificielle concrètes, utiles et adaptées à votre entreprise.";
+  "PRESENCE AI transforme vos opérations grâce à des solutions d'intelligence artificielle concrètes, utiles et adaptées à votre entreprise.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kamel AI — L'IA qui fait avancer votre entreprise" },
+      { title: "PRESENCE AI — L'IA qui fait avancer votre entreprise" },
       { name: "description", content: description },
-      { property: "og:title", content: "Kamel AI — L'IA qui fait avancer votre entreprise" },
+      { property: "og:title", content: "PRESENCE AI — L'IA qui fait avancer votre entreprise" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -86,7 +86,7 @@ const navLinks = [
 
 function Brand() {
   return (
-    <a href="#accueil" className="flex items-center gap-3" aria-label="Kamel AI, accueil">
+    <a href="#accueil" className="flex items-center gap-3" aria-label="PRESENCE AI, accueil">
       <span className="brand-mark" aria-hidden="true"><span /></span>
       <span className="text-[1.08rem] font-extrabold uppercase tracking-[0.16em]">PRESENCE&nbsp;<b className="text-primary">AI</b></span>
     </a>
@@ -212,7 +212,7 @@ function Index() {
 
       <section id="a-propos" className="bg-accent py-24 md:py-32">
         <div className="page-shell grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
-          <div><p className="section-kicker">Pourquoi Kamel AI</p><h2 className="section-title mt-5">L'intelligence artificielle rencontre <span>l'intelligence humaine.</span></h2></div>
+          <div><p className="section-kicker">Pourquoi PRESENCE AI</p><h2 className="section-title mt-5">L'intelligence artificielle rencontre <span>l'intelligence humaine.</span></h2></div>
           <div className="grid gap-8 sm:grid-cols-2">
             <div><Bot className="size-9 text-primary" /><h3 className="mt-5 text-xl font-black">Technologie utile</h3><p className="mt-3 leading-7 text-muted-foreground">Nous choisissons la bonne technologie pour votre enjeu, jamais l'inverse.</p></div>
             <div><TrendingUp className="size-9 text-primary" /><h3 className="mt-5 text-xl font-black">Valeur d'affaires</h3><p className="mt-3 leading-7 text-muted-foreground">Chaque initiative part d'un résultat attendu et d'une façon claire de le mesurer.</p></div>
@@ -239,7 +239,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border bg-foreground py-12 text-background">
-        <div className="page-shell flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><Brand /><p className="mt-4 max-w-md text-sm leading-6 text-background/60">Des solutions d'intelligence artificielle conçues autour de vos ambitions d'affaires.</p></div><div className="flex flex-wrap gap-6 text-sm text-background/60"><a href="#services" className="hover:text-background">Services</a><a href="#a-propos" className="hover:text-background">À propos</a><a href="#contact" className="hover:text-background">Contact</a><span>© 2026 Kamel AI</span></div></div>
+        <div className="page-shell flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><Brand /><p className="mt-4 max-w-md text-sm leading-6 text-background/60">Des solutions d'intelligence artificielle conçues autour de vos ambitions d'affaires.</p></div><div className="flex flex-wrap gap-6 text-sm text-background/60"><a href="#services" className="hover:text-background">Services</a><a href="#a-propos" className="hover:text-background">À propos</a><a href="#contact" className="hover:text-background">Contact</a><span>© 2026 PRESENCE AI</span></div></div>
       </footer>
     </main>
   );

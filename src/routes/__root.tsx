@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kamel AI" },
+      { title: "PRESENCE AI" },
       { name: "description", content: "L'intelligence artificielle au service de vos résultats d'affaires." },
-      { name: "author", content: "Kamel AI" },
-      { property: "og:title", content: "Kamel AI" },
+      { name: "author", content: "PRESENCE AI" },
+      { property: "og:title", content: "PRESENCE AI" },
       { property: "og:description", content: "L'intelligence artificielle au service de vos résultats d'affaires." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
