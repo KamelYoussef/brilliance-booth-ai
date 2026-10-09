@@ -153,7 +153,7 @@ function Estimator() {
     "2-3": [7000, 14000],
     "4+": [14000, 28000],
   };
-  const [scopeLo, scopeHi] = scopeRange[servers];
+  const [scopeLo, scopeHi] = scopeRange[servers] ?? [3500, 7000];
   const secRange = security === "oauth" ? [4000, 8000] : [0, 0];
   const agentRange = agents === "single" ? [3000, 5000] : agents === "multi" ? [8000, 15000] : [0, 0];
   const low = scopeLo + secRange[0] + agentRange[0];
