@@ -74,7 +74,7 @@ const services = [
 
 const oldWay = [
   "Code personnalisé fragmenté pour chaque LLM et chaque framework",
-  " maintenance lourde à chaque mise à jour de modèle",
+  "Maintenance lourde à chaque mise à jour de modèle",
   "Risques de sécurité liés aux identifiants API codés en dur",
   "Intégrations à refaire pour chaque nouvel outil d'IA",
 ];
@@ -90,7 +90,7 @@ const plans = [
   {
     name: "Starter MCP",
     price: "À partir de 3 500 $",
-    blurb: "Idéal pour valider la valeur auprès de vos équipes.",
+    blurb: "Idéal pour valider la valeur auprès de vos équipes (preuve de concept).",
     features: ["1 serveur MCP", "Jusqu'à 3 outils", "Transport stdio/HTTP", "Authentification basique (clé API)"],
     featured: false,
     cta: "Démarrer un projet",
@@ -438,7 +438,7 @@ function Index() {
                   </SelectContent>
                 </Select>
               </label>
-              <label className="form-label">Description du projet / détails des APIs<Textarea required name="message" placeholder="Parlez-nous de vos systèmes, des APIs à exposer ou des agents envisioned..." className="min-h-32" /></label>
+              <label className="form-label">Description du projet / détails des APIs<Textarea required name="message" placeholder="Parlez-nous de vos systèmes, des APIs à exposer ou des agents à déployer..." className="min-h-32" /></label>
               <Button type="submit" size="lg" className="mt-2 h-13 w-full text-base">Demander une estimation <ArrowRight /></Button>
               <p className="text-center text-xs text-muted-foreground">Nous vous répondrons dans un délai d'un jour ouvrable.</p>
             </form>
