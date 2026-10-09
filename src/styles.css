@@ -36,27 +36,27 @@
 
 :root {
   --radius: 0.35rem;
-  --background: oklch(0.99 0.006 95);
-  --foreground: oklch(0.2 0.025 257);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.025 257);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.025 257);
-  --primary: oklch(0.63 0.135 167);
-  --primary-foreground: oklch(0.985 0.004 95);
-  --secondary: oklch(0.22 0.028 257);
-  --secondary-foreground: oklch(0.985 0.004 95);
-  --muted: oklch(0.95 0.01 95);
-  --muted-foreground: oklch(0.48 0.025 255);
-  --accent: oklch(0.95 0.035 163);
-  --accent-foreground: oklch(0.22 0.028 257);
-  --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.985 0.004 95);
-  --border: oklch(0.86 0.015 95);
-  --input: oklch(0.82 0.018 95);
-  --ring: oklch(0.63 0.135 167);
-  --surface: oklch(0.965 0.012 95);
-  --hero: oklch(0.99 0.006 95);
+  --background: oklch(0.15 0.012 257);
+  --foreground: oklch(0.96 0.004 257);
+  --card: oklch(0.18 0.014 257);
+  --card-foreground: oklch(0.96 0.004 257);
+  --popover: oklch(0.18 0.014 257);
+  --popover-foreground: oklch(0.96 0.004 257);
+  --primary: oklch(0.78 0.155 162);
+  --primary-foreground: oklch(0.15 0.012 257);
+  --secondary: oklch(0.96 0.004 257);
+  --secondary-foreground: oklch(0.2 0.02 257);
+  --muted: oklch(0.22 0.014 257);
+  --muted-foreground: oklch(0.68 0.014 257);
+  --accent: oklch(0.23 0.02 257);
+  --accent-foreground: oklch(0.96 0.004 257);
+  --destructive: oklch(0.62 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.28 0.014 257);
+  --input: oklch(0.3 0.014 257);
+  --ring: oklch(0.78 0.155 162);
+  --surface: oklch(0.18 0.014 257);
+  --hero: oklch(0.15 0.012 257);
 }
 
 @layer base {
@@ -77,22 +77,38 @@
   .brand-mark::before { left: .42rem; }
   .brand-mark::after { right: .42rem; }
   .brand-mark > span { background: var(--color-foreground); }
-  .display-title { font-family: var(--font-display); font-size: clamp(3.2rem, 6.2vw, 6.8rem); font-weight: 900; line-height: .94; letter-spacing: 0; }
+  .display-title { font-family: var(--font-display); font-size: clamp(2.9rem, 5.6vw, 5.6rem); font-weight: 900; line-height: .96; letter-spacing: 0; }
   .display-title em { color: var(--color-primary); font-style: normal; }
-  .section-title { font-family: var(--font-display); font-size: clamp(2.35rem, 4vw, 4.25rem); font-weight: 900; line-height: 1.04; letter-spacing: 0; }
+  .section-title { font-family: var(--font-display); font-size: clamp(2.2rem, 3.8vw, 3.9rem); font-weight: 900; line-height: 1.05; letter-spacing: 0; }
   .section-title span { color: var(--color-primary); }
   .section-kicker { display: flex; align-items: center; gap: .75rem; font-size: .75rem; font-weight: 900; text-transform: uppercase; letter-spacing: .16em; }
   .section-kicker::before { content: ""; width: 2rem; height: 3px; background: var(--color-primary); }
-  .section-kicker-inverse { color: var(--color-background); }
   .eyebrow { display: inline-flex; align-items: center; gap: .65rem; color: var(--color-primary); font-size: .75rem; font-weight: 900; text-transform: uppercase; letter-spacing: .16em; }
   .eyebrow svg { width: 1.1rem; height: 1.1rem; }
-  .hero-image-shape { position: relative; aspect-ratio: 1 / 1.06; overflow: hidden; border-radius: 48% 48% 3rem 48%; background: var(--color-muted); }
-  .hero-image-shape::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-background) 30%, transparent); border-radius: inherit; }
-  .hero-image-shape img { width: 100%; height: 100%; object-fit: cover; }
-  .data-line { position: absolute; right: 0; bottom: 0; left: 0; height: .35rem; background: linear-gradient(90deg, var(--color-primary) 0 18%, var(--color-foreground) 18% 37%, var(--color-primary) 37% 72%, var(--color-foreground) 72% 100%); }
-  .service-cell { min-height: 360px; border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 2rem; transition: background-color 240ms ease; }
-  .service-cell:hover { background-color: var(--color-surface); }
+  .hero-glow { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(60rem 32rem at 78% 12%, color-mix(in oklab, var(--color-primary) 14%, transparent), transparent 70%); }
+  .terminal { overflow: hidden; border: 1px solid var(--color-border); border-radius: .9rem; background: color-mix(in oklab, var(--color-card) 88%, black); box-shadow: 0 24px 60px -24px rgb(0 0 0 / .6); padding: 1.4rem 1.5rem; }
+  .terminal-bar { display: flex; align-items: center; margin-bottom: 1.1rem; }
+  .terminal-bar > span { width: .75rem; height: .75rem; border-radius: 999px; background: var(--color-border); margin-right: .4rem; }
+  .terminal-bar > span:first-child { background: var(--color-primary); }
+  .terminal pre { margin: 0; white-space: pre-wrap; color: var(--color-foreground); }
+  .chip { display: inline-flex; align-items: center; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-card); padding: .45rem 1rem; font-size: .82rem; font-weight: 700; color: var(--color-foreground); }
+  .service-cell { min-height: 340px; border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 2.5rem; transition: background-color 240ms ease; }
+  .service-cell:hover { background-color: var(--color-card); }
   .service-number { font-size: .78rem; font-weight: 900; letter-spacing: .15em; color: var(--color-muted-foreground); }
+  .contrast-card { border: 1px solid var(--color-border); border-radius: .9rem; padding: 2rem; }
+  .contrast-card-old { background: color-mix(in oklab, var(--color-card) 70%, transparent); }
+  .contrast-card-new { border-color: color-mix(in oklab, var(--color-primary) 55%, var(--color-border)); background: color-mix(in oklab, var(--color-primary) 7%, var(--color-card)); }
+  .estimator-panel { border: 1px solid var(--color-border); border-radius: 1rem; background: var(--color-card); padding: 2rem; }
+  .estimator-group + .estimator-group { margin-top: 1.75rem; }
+  .estimator-label { font-size: .85rem; font-weight: 800; margin-bottom: .75rem; }
+  .option-card { display: flex; align-items: center; gap: .6rem; cursor: pointer; border: 1px solid var(--color-border); border-radius: .6rem; background: var(--color-background); padding: .85rem 1rem; font-size: .9rem; font-weight: 600; transition: border-color 160ms ease, background-color 160ms ease; }
+  .option-card:hover { border-color: color-mix(in oklab, var(--color-primary) 60%, var(--color-border)); }
+  .option-card:has(input:checked) { border-color: var(--color-primary); background: color-mix(in oklab, var(--color-primary) 10%, var(--color-background)); }
+  .option-card input { accent-color: var(--color-primary); }
+  .estimator-result { display: grid; gap: 1.25rem; margin-top: 2rem; border: 1px dashed color-mix(in oklab, var(--color-primary) 55%, var(--color-border)); border-radius: .75rem; padding: 1.5rem; }
+  .price-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: 1rem; background: var(--color-card); padding: 2.25rem 2rem; }
+  .price-card-featured { border-color: var(--color-primary); box-shadow: 0 0 0 1px var(--color-primary), 0 24px 60px -30px color-mix(in oklab, var(--color-primary) 45%, transparent); }
+  .price-flag { position: absolute; top: -.85rem; left: 2rem; border-radius: 999px; background: var(--color-primary); color: var(--color-primary-foreground); padding: .3rem .9rem; font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
   .form-label { display: grid; gap: .55rem; font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
   .form-label input, .form-label textarea { background: var(--color-background); font-weight: 500; text-transform: none; letter-spacing: 0; }
 }
@@ -100,6 +116,10 @@
 @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 .animate-rise { animation: rise .7s ease-out both; }
 .animate-rise-delayed { animation: rise .8s .12s ease-out both; }
+
+@media (min-width: 640px) {
+  .estimator-result { grid-template-columns: 1fr 1fr; }
+}
 
 @media (min-width: 768px) {
   .page-shell { width: min(100% - 4rem, 76rem); }
