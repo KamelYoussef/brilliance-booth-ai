@@ -154,8 +154,8 @@ function Estimator() {
     "4+": [14000, 28000],
   };
   const [scopeLo, scopeHi] = scopeRange[servers] ?? [3500, 7000];
-  const secRange = security === "oauth" ? [4000, 8000] : [0, 0];
-  const agentRange = agents === "single" ? [3000, 5000] : agents === "multi" ? [8000, 15000] : [0, 0];
+  const secRange: [number, number] = security === "oauth" ? [4000, 8000] : [0, 0];
+  const agentRange: [number, number] = agents === "single" ? [3000, 5000] : agents === "multi" ? [8000, 15000] : [0, 0];
   const low = scopeLo + secRange[0] + agentRange[0];
   const high = scopeHi + secRange[1] + agentRange[1];
 
